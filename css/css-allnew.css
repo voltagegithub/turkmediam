@@ -1,0 +1,17 @@
+            nav.navbar.navbar-expand-xxl.white {
+                background: #ecf1f7;
+            }
+            .navbar.white .nav-link {
+                color: #0f264b!important;
+            }
+            .navbar.white .navbar__basket {
+                border: 1px solid #404762!important;
+                background: #404762!important;
+            }
+            .navbar.white .navbar__login {
+                border: 1px solid #404762 !important;
+                background-color: #404762!important;
+            }
+            .navbar.white .nav-link::after {
+                    background: no-repeat url(../fonts/icons-bottom-chevron.svg)!important;
+            }

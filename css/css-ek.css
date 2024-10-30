@@ -1,0 +1,346 @@
+.toastify {
+    padding: 12px 20px;
+    color: #ffffff;
+    display: inline-block;
+    background: linear-gradient(135deg, #73a5ff, #5477f5);
+    position: fixed;
+    opacity: 0;
+    top: -2px;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: calc(50% - 20px);
+    z-index: 99999999;
+}
+
+.toastify.bg-danger {
+    background: linear-gradient(135deg, #ff73c5, #f55454);
+}
+
+.toastify.bg-success {
+    background: linear-gradient(135deg, #40c080, #159c91);
+}
+
+.toastify.on {
+    opacity: 1;
+}
+
+.toast-close {
+    background: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    opacity: 0.4;
+    padding: 0 5px;
+}
+
+.toastify-right {
+    right: 15px;
+}
+
+.toastify-bottom {
+    bottom: -150px;
+}
+
+.toastify-rounded {
+    border-radius: 25px;
+}
+
+.toastify-avatar {
+    width: 1.5em;
+    height: 1.5em;
+    margin: -7px 5px;
+    border-radius: 2px;
+}
+
+.toastify-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+}
+
+.toastify-center {
+    transform: translate(0px, -10px) !important;
+}
+
+.full-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(0, 0, 0.34, 0.81);
+}
+
+.full-alert.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-alert .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #353642;
+    opacity: .95;
+    transition: 0.4s cubic-bezier(0, 0, 0.34, 0.81);
+}
+
+.full-alert .contside {
+    background: #1a1b2a;
+    padding: 20px 30px;
+    z-index: 1;
+    border-radius: 25px;
+    min-width: 380px;
+}
+
+.full-alert .content {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 0.4s cubic-bezier(0, 0, 0.34, 0.81);
+    transition-delay: .2s;
+}
+
+.full-alert .icon {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.full-alert .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.full-alert .description {
+    color: #bec7d7;
+    font-size: 18px;
+    margin-top: 2px;
+    margin-bottom: 25px;
+}
+
+.full-alert .action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.4s cubic-bezier(0, 0, 0.34, 0.81);
+    transition-delay: .2s;
+}
+
+.full-alert .action .butto {
+    padding: 15px 25px !important;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.full-alert.show .overlay {
+    opacity: .98;
+}
+
+.full-alert.show .content {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.full-alert.show .action {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+:root {
+    --white: #fff;
+    --danger: #f56a6a;
+    --warning: #fd5600e0;
+    --primary: #6a7bf5;
+    --success: #57c781;
+    --orange: #fe500b;
+    --light: #5f728a;
+}
+
+.dashboard__order-head {
+    height: 70px !important;
+}
+
+[class*=butto-outline].butto-lg,
+[class*=badge-outline].badge-lg {
+    padding: 9px 20px !important
+}
+
+.butto-xlg,
+.badge-xlg {
+    padding: 10px 15px;
+    font-size: 15px
+}
+
+[class*=butto-outline].butto-xlg,
+[class*=badge-outline].badge-xlg {
+    padding: 14px 25px !important
+}
+
+.butto-primary,
+.badge-primary {
+    color: #fff !important;
+    background: var(--primary)
+}
+
+.border-primary {
+    border-color: var(--primary) !important
+}
+
+.badge-outline-primary,
+.butto-outline-primary {
+    color: var(--primary) !important;
+    border: 1px solid var(--primary);
+    filter: brightness(1) !important
+}
+
+.badge-outline-primary:hover,
+.butto-outline-primary:hover {
+    color: #fff !important;
+    background: var(--primary)
+}
+
+.butto-main,
+.badge-main {
+    color: #fff !important;
+    background: var(--main-color)
+}
+
+.badge-outline-main,
+.butto-outline-main {
+    color: var(--main-color) !important;
+    border: 1px solid var(--main-color);
+    filter: brightness(1) !important
+}
+
+.badge-outline-main:hover,
+.butto-outline-main:hover {
+    color: #fff !important;
+    background: var(--main-color)
+}
+
+.butto-success,
+.badge-success {
+    color: #fff !important;
+    background: var(--success)
+}
+
+.border-success {
+    border-color: var(--success) !important
+}
+
+.badge-outline-success,
+.butto-outline-success {
+    color: var(--success) !important;
+    border: 1px solid var(--success);
+    filter: brightness(1) !important
+}
+
+.badge-outline-success:hover,
+.butto-outline-success:hover {
+    color: #fff !important;
+    background: var(--success)
+}
+
+.butto-warning,
+.badge-warning {
+    color: #fff !important;
+    background: var(--warning)
+}
+
+.border-warning {
+    border-color: var(--warning) !important
+}
+
+.badge-outline-warning,
+.butto-outline-warning {
+    color: var(--warning) !important;
+    border: 1px solid var(--warning);
+    filter: brightness(1) !important
+}
+
+.badge-outline-warning:hover,
+.butto-outline-warning:hover {
+    color: #fff !important;
+    background: var(--warning)
+}
+
+.butto-danger,
+.badge-danger {
+    color: #fff !important;
+    background: var(--danger) !important
+}
+
+.border-danger {
+    border-color: var(--danger) !important
+}
+
+.badge-outline-danger,
+.butto-outline-danger {
+    color: var(--danger) !important;
+    border: 1px solid var(--danger);
+    filter: brightness(1) !important
+}
+
+.badge-outline-danger:hover,
+.butto-outline-danger:hover {
+    color: #fff !important;
+    background: var(--danger)
+}
+
+.butto-light,
+.badge-light {
+    color: var(--white);
+    background: var(--light)
+}
+
+.badge-outline-light,
+.butto-outline-light {
+    color: var(--light) !important;
+    border: 1px solid #e0e0e0;
+    filter: brightness(1) !important
+}
+
+.badge-outline-light:hover,
+.butto-outline-light:hover {
+    color: var(--white) !important;
+    background: var(--light) !important;
+    border-color: var(--light) !important
+}
+
+.butto-base,
+.badge-base {
+    color: var(--white);
+    background: var(--orange)
+}
+
+.badge-outline-base,
+.butto-outline-base {
+    color: var(--orange) !important;
+    border: 1px solid var(--orange);
+    filter: brightness(1) !important
+}
